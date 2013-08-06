@@ -1,0 +1,5 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>DD3636CD-F5C6-489F-BD23-96F346284006/d:Facade</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

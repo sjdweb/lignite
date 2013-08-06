@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD3636CD-F5C6-489F-BD23-96F346284006}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lignite.Controls</RootNamespace>
+    <AssemblyName>Lignite.Controls</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConsoleOutput.Designer.cs">
+      <DependentUpon>ConsoleOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CurrentBetsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurrentBetsView.Designer.cs">
+      <DependentUpon>CurrentBetsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\BroadcastMarketStateRequestEventArgs.cs" />
+    <Compile Include="Events\MarketDataUpdateEventArgs.cs" />
+    <Compile Include="Events\DataProcessorMarketThreadStatusChangedEventArgs.cs" />
+    <Compile Include="Events\DisplayMessageEventArgs.cs" />
+    <Compile Include="Events\LigniteControlEventArgs.cs" />
+    <Compile Include="Events\ShowPlaceBetControlEventArgs.cs" />
+    <Compile Include="Facade\IUserControl.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="MarketViewContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarketViewContainer.Designer.cs">
+      <DependentUpon>MarketViewContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarketView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarketView.Designer.cs">
+      <DependentUpon>MarketView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectionView.Designer.cs">
+      <DependentUpon>SelectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimplePlaceBetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimplePlaceBetControl.Designer.cs">
+      <DependentUpon>SimplePlaceBetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemStatusMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemStatusMonitor.Designer.cs">
+      <DependentUpon>SystemStatusMonitor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsoleOutput.resx">
+      <DependentUpon>ConsoleOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentBetsView.resx">
+      <DependentUpon>CurrentBetsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketViewContainer.resx">
+      <DependentUpon>MarketViewContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketView.resx">
+      <DependentUpon>MarketView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionView.resx">
+      <DependentUpon>SelectionView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemStatusMonitor.resx">
+      <DependentUpon>SystemStatusMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Betfair.Collections\Betfair.Collections.csproj">
+      <Project>{4DAA2F5D-9B41-4A30-953D-591E58EE539E}</Project>
+      <Name>Betfair.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Betfair.Utilities\Betfair.Utilities.csproj">
+      <Project>{7A1E1F02-FE4F-4E3C-B3F1-DB2C56D5AED6}</Project>
+      <Name>Betfair.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vossie.Utilities\Vossie.Utilities.csproj">
+      <Project>{A63B0012-627D-44F0-BF04-6E17DB6AC723}</Project>
+      <Name>Vossie.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsoleOutput.bmp" />
+    <Content Include="Images\ArrowFirst.png" />
+    <Content Include="Images\ArrowFirst_Over.png" />
+    <Content Include="Images\ArrowLast.png" />
+    <Content Include="Images\ArrowLast_Over.png" />
+    <Content Include="Images\ArrowLeft.png" />
+    <Content Include="Images\ArrowLeft_Over.png" />
+    <Content Include="Images\ArrowRight.png" />
+    <Content Include="Images\ArrowRight_Over.png" />
+    <Content Include="Images\BackButton.png" />
+    <Content Include="Images\BackButtonOver.png" />
+    <Content Include="Images\betfair_chart.gif" />
+    <Content Include="Images\bullet_ball_blue.png" />
+    <Content Include="Images\bullet_ball_glass_green.png" />
+    <Content Include="Images\bullet_ball_glass_grey.png" />
+    <Content Include="Images\bullet_ball_glass_red.png" />
+    <Content Include="Images\bullet_ball_glass_yellow.png" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\ControlRunnerActive.png" />
+    <Content Include="Images\DefaultButton.png" />
+    <EmbeddedResource Include="EventController.bmp" />
+    <Content Include="Images\LayButton.png" />
+    <Content Include="Images\LayButtonOver.png" />
+    <Content Include="Images\li.png" />
+    <Content Include="Images\NewItemAdded.png" />
+    <Content Include="Images\PlaceBetFormBackground.png" />
+    <Content Include="Images\PlaceBetFormBackgroundLay.png" />
+    <Content Include="Images\RoundedLeftBottom.png" />
+    <Content Include="Images\RoundedLeftTop.png" />
+    <Content Include="Images\RoundedRightBottom.png" />
+    <Content Include="Images\RoundedRightTop.png" />
+    <Content Include="Images\rss.png" />
+    <Content Include="Images\RunnerBackGround.png" />
+    <Content Include="Images\sample_silk.png" />
+    <Content Include="Images\ThreadControlBackground.png" />
+    <Content Include="Images\ThreadControlBackgroundLeft.png" />
+    <Content Include="Images\ThreadControlBackgroundLeftClosed.png" />
+    <Content Include="Images\ThreadControlBackgroundLeftInactive.png" />
+    <Content Include="Images\ThreadControlBackgroundLeftInPlay.png" />
+    <Content Include="Images\ThreadControlBackgroundLeftSuspended.png" />
+    <Content Include="Images\ThreadControlBackgroundRight.png" />
+    <Content Include="Images\ThreadControlBackgroundRightBlank.png" />
+    <Content Include="Images\ThreadControlBackgroundRightUp.png" />
+    <Content Include="Images\ThreadViewPagingBackground.png" />
+    <EmbeddedResource Include="SelectionView.bmp" />
+    <EmbeddedResource Include="MarketViewContainer.bmp" />
+    <EmbeddedResource Include="MarketView.bmp" />
+    <EmbeddedResource Include="SimplePlaceBetControl.resx">
+      <DependentUpon>SimplePlaceBetControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
